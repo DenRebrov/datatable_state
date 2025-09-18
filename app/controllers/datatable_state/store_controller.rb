@@ -7,7 +7,7 @@ module DatatableState
 
     def save
       if @store
-        @store.update_attributes(store_params)
+        @store.update(store_params)
       else
         @store = Store.new(store_params)
         @store.user = current_user
